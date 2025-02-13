@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 void main() {
   runApp(const MyApp());
@@ -28,7 +29,7 @@ class FirstScreen extends StatelessWidget {
   Widget build (BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Rui'),
+        title: Text('Meet my dog Rui!', style: GoogleFonts.galindo(fontSize: 30),),
         backgroundColor: Color.fromRGBO(71, 182, 255, 1),
       ),
       body: Center(
@@ -37,7 +38,13 @@ class FirstScreen extends StatelessWidget {
             SizedBox(height: 20),
             Image.network('https://i.imgur.com/5SenNXv.png', scale: 3.5),
             SizedBox(height: 20),
-            Text('Name: Rui\nAge: 3\nLikes: Baking, Sleeping', textAlign: TextAlign.center,),
+            Text(
+              'Name: Rui\nAge: 3\nLikes: Being held, following you around, running around everywhere',
+              textAlign: TextAlign.center,
+              style: GoogleFonts.galindo(
+                fontSize: 20,
+              ),
+            ),
             SizedBox(height: 20),
             ElevatedButton(
               onPressed: () {
