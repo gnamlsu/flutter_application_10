@@ -140,22 +140,41 @@ class PageOfRivers extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Second Page'),
+        title: const Text('Rivers Page'),
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
       ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            const Text('This is the second page'),
-            ElevatedButton(
-              onPressed: () {
-                Navigator.pop(context);  // This will go back to previous page
-              },
-              child: const Text('Go Back'),
+      body: Stack(
+        children: [
+          // Background image
+          Image.asset(
+            'assets/koromaru.jpg',  // Replace with your actual image name
+            width: double.infinity,
+            height: double.infinity,
+            fit: BoxFit.cover,
+          ),
+          // Content on top of the image
+          Center(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                const Text(
+                  'This is the Rivers page',
+                  style: TextStyle(
+                    color: Colors.white,  // Make text visible on the image
+                    fontSize: 24,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+                ElevatedButton(
+                  onPressed: () {
+                    Navigator.pop(context);
+                  },
+                  child: const Text('Go Back'),
+                ),
+              ],
             ),
-          ],
-        ),
+          ),
+        ],
       ),
     );
   }
