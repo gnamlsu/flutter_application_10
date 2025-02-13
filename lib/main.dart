@@ -89,6 +89,12 @@ class LynnPage extends StatelessWidget {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
+                ElevatedButton.icon(
+                  onPressed: (){},
+                  label: Text('Peek-a-Boo!'),
+                  icon: Icon(Icons.visibility),
+                ),
+
                 SizedBox(
                   height: 10,
                 ),
