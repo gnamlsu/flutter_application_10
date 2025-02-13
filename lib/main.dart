@@ -120,7 +120,7 @@ class RiversPage extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 const Text(
-                  'This is the Rivers page',
+                  'This is THE Rivers page',
                   style: TextStyle(
                     color: Color.fromARGB(235, 218, 11, 14),  // Make text visible on the image
                     fontSize: 24,
