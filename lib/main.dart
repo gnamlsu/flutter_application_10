@@ -112,6 +112,15 @@ class _MyHomePageState extends State<MyHomePage> {
               '$_counter',
               style: Theme.of(context).textTheme.headlineMedium,
             ),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const PageOfRivers()),
+                );
+              },
+              child: const Text('Go to the second page'),
+            ),
           ],
         ),
       ),
@@ -120,6 +129,34 @@ class _MyHomePageState extends State<MyHomePage> {
         tooltip: 'Increment',
         child: const Icon(Icons.add),
       ), // This trailing comma makes auto-formatting nicer for build methods.
+    );
+  }
+}
+
+class PageOfRivers extends StatelessWidget {
+  const PageOfRivers({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('Second Page'),
+        backgroundColor: Theme.of(context).colorScheme.inversePrimary,
+      ),
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            const Text('This is the second page'),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.pop(context);  // This will go back to previous page
+              },
+              child: const Text('Go Back'),
+            ),
+          ],
+        ),
+      ),
     );
   }
 }
