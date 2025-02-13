@@ -121,6 +121,18 @@ class _MyHomePageState extends State<MyHomePage> {
               },
               child: const Text('Go to the second page'),
             ),
+            SizedBox(
+              height: 10
+            ),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const LynnPage()),
+                );
+              },
+              child: const Text("Go to Lynn's page"),
+            ),
           ],
         ),
       ),
@@ -129,6 +141,7 @@ class _MyHomePageState extends State<MyHomePage> {
         tooltip: 'Increment',
         child: const Icon(Icons.add),
       ), // This trailing comma makes auto-formatting nicer for build methods.
+      
     );
   }
 }
@@ -176,6 +189,20 @@ class PageOfRivers extends StatelessWidget {
           ),
         ],
       ),
+    );
+  }
+}
+
+class LynnPage extends StatelessWidget {
+  const LynnPage({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text("Lynn's Page"),
+        centerTitle: true,
+      )
     );
   }
 }
