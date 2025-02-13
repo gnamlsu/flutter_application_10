@@ -88,54 +88,56 @@ class _LynnPageState extends State<LynnPage> {
       appBar: AppBar(
         title: const Text(
           'Help me find my dog Leo!',
-          style: TextStyle(fontWeight: FontWeight.bold)
+          style: TextStyle(fontWeight: FontWeight.bold),
         ),
+        centerTitle: true,
         backgroundColor: Color.fromRGBO(71, 182, 255, 1),
       ),
-      body: Stack(
-        children: [
-          Image(
-            image: assetImages[curImage],
-          ),
-          Center(
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                ElevatedButton.icon(
-                  onPressed: (){
-                    setState(() {
-                      if (curImage == 0) {
-                        curImage = 1;
-                      }
-                      else {
-                        curImage = 0;
-                      }
-                    });
-                  },
-                  label: Text('Peek-a-Boo!'),
-                  icon: Icon(Icons.visibility),
-                ),
-                SizedBox(
-                  height: 10,
-                ),
-                ElevatedButton(
-                  onPressed: () {
-                    Navigator.pop(context);
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context) => const RiversPage()),
-                    );
-                  },
-                  style: ElevatedButton.styleFrom(
-                    shape: CircleBorder(),
-                    padding: EdgeInsets.all(17),
-                  ),
-                  child: Icon(Icons.pets),
-                ),
-              ],
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Image(
+              image: assetImages[curImage],
+              width: 300,
+              height: 300,
             ),
-          ),
-        ],
+            SizedBox(
+              height: 10
+            ),
+            ElevatedButton.icon(
+              onPressed: (){
+                setState(() {
+                  if (curImage == 0) {
+                    curImage = 1;
+                  }
+                  else {
+                    curImage = 0;
+                  }
+                });
+              },
+              label: Text('Peek-a-Boo!'),
+              icon: Icon(Icons.visibility),
+            ),
+            SizedBox(
+              height: 10,
+            ),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.pop(context);
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const RiversPage()),
+                );
+              },
+              style: ElevatedButton.styleFrom(
+                shape: CircleBorder(),
+                padding: EdgeInsets.all(17),
+              ),
+              child: Icon(Icons.pets),
+            ),
+          ],
+        ),
       ),
     );
   }
