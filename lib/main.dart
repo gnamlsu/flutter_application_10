@@ -67,34 +67,54 @@ class FirstScreen extends StatelessWidget {
   }
 }
 
-class LynnPage extends StatelessWidget {
+class LynnPage extends StatefulWidget {
   const LynnPage({super.key});
+
+  @override
+  _LynnPageState createState() => _LynnPageState();
+}
+
+class _LynnPageState extends State<LynnPage> {
+  List<AssetImage> assetImages = [
+    const AssetImage('assets/dog-hide.png'),
+    const AssetImage('assets/dog-show.png')
+  ];
+
+  int curImage = 0;
 
   @override
   Widget build (BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Lynn\'s Page'),
+        title: const Text(
+          'Help me find my dog Leo!',
+          style: TextStyle(fontWeight: FontWeight.bold)
+        ),
         backgroundColor: Color.fromRGBO(71, 182, 255, 1),
       ),
       body: Stack(
         children: [
-          Image.asset(
-            'assets/dog-show.png'
-          ),
-          Image.asset(
-            'assets/dog-hide.png'
+          Image(
+            image: assetImages[curImage],
           ),
           Center(
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 ElevatedButton.icon(
-                  onPressed: (){},
+                  onPressed: (){
+                    setState(() {
+                      if (curImage == 0) {
+                        curImage = 1;
+                      }
+                      else {
+                        curImage = 0;
+                      }
+                    });
+                  },
                   label: Text('Peek-a-Boo!'),
                   icon: Icon(Icons.visibility),
                 ),
-
                 SizedBox(
                   height: 10,
                 ),
