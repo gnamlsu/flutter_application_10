@@ -122,7 +122,7 @@ class RiversPage extends StatelessWidget {
                 const Text(
                   'This is the Rivers page',
                   style: TextStyle(
-                    color: Colors.white,  // Make text visible on the image
+                    color: Color.fromARGB(235, 218, 11, 14),  // Make text visible on the image
                     fontSize: 24,
                     fontWeight: FontWeight.bold,
                   ),
