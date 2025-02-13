@@ -75,29 +75,41 @@ class LynnPage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Lynn\'s Page'),
+        backgroundColor: Color.fromRGBO(71, 182, 255, 1),
       ),
-      body: Center(
-        child: Column(
-          children: [
-            SizedBox(height: 20),
-            Text('Screen 2'),
-            SizedBox(height: 20),
-            ElevatedButton(
-              onPressed: () {
-                Navigator.pop(context);
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => const RiversPage()),
-                );
-              },
-              style: ElevatedButton.styleFrom(
-                shape: CircleBorder(),
-                padding: EdgeInsets.all(17),
-              ),
-              child: Icon(Icons.pets),
+      body: Stack(
+        children: [
+          Image.asset(
+            'assets/dog-show.png'
+          ),
+          Image.asset(
+            'assets/dog-hide.png'
+          ),
+          Center(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                SizedBox(
+                  height: 10,
+                ),
+                ElevatedButton(
+                  onPressed: () {
+                    Navigator.pop(context);
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => const RiversPage()),
+                    );
+                  },
+                  style: ElevatedButton.styleFrom(
+                    shape: CircleBorder(),
+                    padding: EdgeInsets.all(17),
+                  ),
+                  child: Icon(Icons.pets),
+                ),
+              ],
             ),
-          ],
-        ),
+          ),
+        ],
       ),
     );
   }
@@ -156,3 +168,4 @@ class RiversPage extends StatelessWidget {
     );
   }
 }
+
