@@ -29,7 +29,7 @@ class FirstScreen extends StatelessWidget {
   Widget build (BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Meet my dog Rui!', style: GoogleFonts.comicNeue(fontSize: 30, fontWeight: FontWeight.bold),),
+        title: Text('Meet my dog Rui!', style: GoogleFonts.comicNeue(fontSize: 35, fontWeight: FontWeight.bold),),
         backgroundColor: Color.fromRGBO(71, 182, 255, 1),
       ),
       body: Center(
@@ -42,7 +42,7 @@ class FirstScreen extends StatelessWidget {
               'Name: Rui\nAge: 3\nLikes: Being held,\nfollowing you around,\nrunning around everywhere',
               textAlign: TextAlign.center,
               style: GoogleFonts.comicNeue(
-                fontSize: 20,
+                fontSize: 25,
               ),
             ),
             SizedBox(height: 20),
