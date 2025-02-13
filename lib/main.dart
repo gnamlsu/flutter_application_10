@@ -29,19 +29,19 @@ class FirstScreen extends StatelessWidget {
   Widget build (BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Meet my dog Rui!', style: GoogleFonts.galindo(fontSize: 30),),
+        title: Text('Meet my dog Rui!', style: GoogleFonts.comicNeue(fontSize: 30, fontWeight: FontWeight.bold),),
         backgroundColor: Color.fromRGBO(71, 182, 255, 1),
       ),
       body: Center(
         child: Column(
           children: [
             SizedBox(height: 20),
-            Image.network('https://i.imgur.com/5SenNXv.png', scale: 3.5),
+            Image.network('https://i.imgur.com/d7aG7zs.jpeg', scale: 3.5),
             SizedBox(height: 20),
             Text(
-              'Name: Rui\nAge: 3\nLikes: Being held, following you around, running around everywhere',
+              'Name: Rui\nAge: 3\nLikes: Being held,\nfollowing you around,\nrunning around everywhere',
               textAlign: TextAlign.center,
-              style: GoogleFonts.galindo(
+              style: GoogleFonts.comicNeue(
                 fontSize: 20,
               ),
             ),
