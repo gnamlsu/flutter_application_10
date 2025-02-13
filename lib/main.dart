@@ -39,7 +39,7 @@ class FirstScreen extends StatelessWidget {
             Image.network('https://i.imgur.com/d7aG7zs.jpeg', scale: 3.5),
             SizedBox(height: 20),
             Text(
-              'Name: Rui\nAge: 3\nLikes: Being held,\nfollowing you around,\nrunning around everywhere',
+              'Name: Rui\nAge: 3\nBreed: Maltipoo\nLikes: Being held,\nfollowing you around,\nrunning around everywhere',
               textAlign: TextAlign.center,
               style: GoogleFonts.comicNeue(
                 fontSize: 25,
